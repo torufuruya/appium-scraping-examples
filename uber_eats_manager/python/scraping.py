@@ -80,7 +80,7 @@ def main():
         print (f'elapsed_time: {time.time() - start}[sec]')
 
         # Send data to API
-        endpoint = 'https://sample.amazonaws.com/v1/uber'
+        endpoint = 'https://httpbin.org/post'
         headers = {'Content-Type': 'application/json'}
         data = {'data': create_api_post_data(sales_hash, orders_hash)}
         res = requests.post(endpoint, json=data, headers=headers)
